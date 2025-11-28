@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════════
+  SISTEMA DE SOLICITUD DE REEMBOLSO - INSTRUCCIONES
+═══════════════════════════════════════════════════════════════
+
+✅ NO NECESITAS INSTALAR NADA - Funciona directamente en tu navegador
+
+📋 CÓMO USAR:
+
+1. FORMULARIO DE SOLICITUD:
+   - Abre el archivo: public/index.html
+   - Haz doble clic en el archivo o arrástralo a tu navegador
+   - Completa el formulario con los datos del cliente
+   - Haz clic en "Enviar Solicitud"
+   - Los datos se guardarán automáticamente en tu navegador
+
+2. VER SOLICITUDES GUARDADAS:
+   - Abre el archivo: public/admin.html
+   - O haz clic en "Ver solicitudes guardadas" desde el formulario
+   - Verás todas las solicitudes que se han guardado
+
+3. EXPORTAR DATOS:
+   - En el panel de administración, haz clic en "Exportar JSON"
+   - Se descargará un archivo con todas las solicitudes
+   - Guárdalo en un lugar seguro como respaldo
+
+4. LIMPIAR DATOS:
+   - En el panel de administración, haz clic en "Limpiar Todo"
+   - Esto eliminará todas las solicitudes guardadas
+   - ⚠️ Esta acción no se puede deshacer
+
+═══════════════════════════════════════════════════════════════
+
+📝 NOTAS IMPORTANTES:
+
+- Los datos se guardan en el navegador donde completas el formulario
+- Si cambias de navegador o limpias los datos del navegador, 
+  perderás las solicitudes
+- RECOMENDACIÓN: Exporta los datos regularmente como respaldo
+- Los archivos de identificación se guardan como imágenes base64
+  dentro de los datos JSON
+
+═══════════════════════════════════════════════════════════════
+
