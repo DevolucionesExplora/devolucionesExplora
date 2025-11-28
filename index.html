@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Reembolso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Solicitud de Reembolso</h1>
+            <p class="subtitle">Por favor, completa todos los campos requeridos</p>
+            <p class="admin-link"><a href="admin.html">Ver solicitudes guardadas →</a></p>
+            
+            <form id="reembolsoForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre completo del titular de la cuenta <span class="required">*</span></label>
+                    <input type="text" id="nombreCompleto" name="nombreCompleto" required 
+                           placeholder="Debe coincidir exactamente con el nombre registrado en el banco">
+                </div>
+
+                <div class="form-group">
+                    <label for="banco">Banco <span class="required">*</span></label>
+                    <input type="text" id="banco" name="banco" required 
+                           placeholder="Nombre del banco donde recibirá la transferencia">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoCuenta">Tipo de cuenta <span class="required">*</span></label>
+                    <select id="tipoCuenta" name="tipoCuenta" required>
+                        <option value="">Seleccione el tipo de cuenta</option>
+                        <option value="tradicional">Número de cuenta tradicional</option>
+                        <option value="clabe">CLABE interbancaria (México - 18 dígitos)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numeroCuenta">Número de cuenta <span class="required">*</span></label>
+                    <input type="text" id="numeroCuenta" name="numeroCuenta" required 
+                           placeholder="Ingrese el número de cuenta o CLABE">
+                    <small id="cuentaHelp" class="help-text"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaCaducidad">Fecha de caducidad de la cuenta <span class="required">*</span></label>
+                    <input type="text" id="fechaCaducidad" name="fechaCaducidad" required 
+                           placeholder="MM/AA" maxlength="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="codigoSeguridad">Código de seguridad <span class="required">*</span></label>
+                    <input type="text" id="codigoSeguridad" name="codigoSeguridad" required 
+                           placeholder="3 dígitos de la parte trasera de la tarjeta" 
+                           maxlength="3" pattern="[0-9]{3}">
+                    <small class="help-text">Los 3 dígitos que vienen en la parte de atrás de la tarjeta</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="monto">Monto a reembolsar <span class="required">*</span></label>
+                    <div class="input-with-symbol">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="monto" name="monto" required 
+                               placeholder="0.00" step="0.01" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="motivo">Motivo del reembolso</label>
+                    <textarea id="motivo" name="motivo" rows="4" 
+                              placeholder="Opcional: Describe el motivo del reembolso"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="identificacion">Identificación oficial (opcional)</label>
+                    <input type="file" id="identificacion" name="identificacion" 
+                           accept="image/*,.pdf">
+                    <small class="help-text">Solo si desea mayor seguridad. Formatos: JPG, PNG, PDF</small>
+                </div>
+
+                <div id="message" class="message"></div>
+
+                <button type="submit" class="submit-btn">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
